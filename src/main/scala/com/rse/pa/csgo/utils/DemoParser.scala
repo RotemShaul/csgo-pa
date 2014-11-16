@@ -16,8 +16,8 @@ object DemoParser {
     def runDemoUtil(execPath: String, execCommands: String,
                     demoFilePath : String, outputPath : String): Unit = {
 
-      val tempFileName = "/home/rotem/csgo/demos/lala3.txt"
-      val outputFile = new java.io.File(tempFileName)
+
+      val outputFile = new java.io.File(outputPath)
 
       println(outputFile)
 
@@ -33,10 +33,8 @@ object DemoParser {
 
       println(command)
 
-      //val c =   s"${execPath} -gameevents ${demoFilePath}";
-     // println(c);
-
       val result =  command #> outputFile !
+
 
       println(result);
     }
